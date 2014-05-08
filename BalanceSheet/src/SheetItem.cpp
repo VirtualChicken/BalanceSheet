@@ -67,20 +67,4 @@ SheetItem SheetItem::operator- (long int subValue){
 	return SheetItem (getName(), getValue() - subValue);
 }
 
-/*************************************
- *                                   *
- *            CompItem               *
- *                                   *
- *************************************/
-
-//CompItem::CompItem() {
-//	SheetItem();
-//}
-//
-//CompItem::~CompItem() {
-//
-//}
-
-
-
 } /* namespace bs */
