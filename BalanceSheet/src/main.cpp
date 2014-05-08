@@ -8,14 +8,17 @@
 
 #include <iostream>
 #include "SheetItem.hpp"
+#include "Balance.hpp"
 
 using namespace std;
 
 int main() {
 	cout << "Szia Evcsy!!!" << endl; // prints !!!Hello World!!!
 
-	bs::SheetItem cucc;
-	cucc.print();
+	bs::Balance balance("Merleg");
+
+	balance.print();
+
 
 	return 0;
 }

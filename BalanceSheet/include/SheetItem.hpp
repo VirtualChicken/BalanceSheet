@@ -20,7 +20,7 @@ class SheetItem {
 private:
 	std::string name;
 	long int value;
-	std::map<std::string,SheetItem> items;
+	std::map<std::string,SheetItem*> items;
 
 public:
 	SheetItem (): name(""), value(0) {}
@@ -28,17 +28,19 @@ public:
 	SheetItem (std::string name);
 	virtual ~SheetItem ();
 	void print ();
+	void recPrint (std::string tabs);
 	void setValue (int value);
 	void setName (std::string name);
+	void setItem (SheetItem* item);
 	long int getValue ();
 	std::string getName ();
+	SheetItem* getItem (std::string itemName);
 	SheetItem operator+ (SheetItem rightItem);
 	SheetItem operator+ (long int addedValue);
 	SheetItem operator- (SheetItem rightItem);
 	SheetItem operator- (long int subValue);
 
 };
-
 
 } /* namespace bs */
 #endif /* SHEETITEM_HPP_ */

@@ -16,13 +16,17 @@ namespace bs {
 class Balance {
 
 private:
-	// Assets
+
+	std::string name;
 	SheetItem assets;
 	SheetItem liabilities;
 
 public:
 	Balance();
+	Balance(std::string name);
 	virtual ~Balance();
+	void init();
+	void print();
 };
 
 } /* namespace bs */
